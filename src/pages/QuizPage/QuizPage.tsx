@@ -1,7 +1,11 @@
+import { LightModeProvider } from '../../components/context/lightMode'
 import QuizComponent from '../../components/quizComponent/quizComponent'
 
 export default function QuizPage() {
     return (
-        <QuizComponent />
+        <LightModeProvider>
+            <QuizComponent />
+
+        </LightModeProvider>
     )
 }
