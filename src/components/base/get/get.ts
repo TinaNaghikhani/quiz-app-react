@@ -1,17 +1,18 @@
-import { BASE_URL_CATEGORY, BASE_URL_QUIZ } from "../const";
+ import { BASE_URL_CATEGORY, BASE_URL_QUIZ } from "../const";
 
-// interface Iprops {
-//   count: number;
-//   category: string;
-//   difficulty: string;
-// }
-
-export const getQuizData = async ( count:number, category:string, difficulty:string ) => {
-  const data = await fetch(
+export const getQuizData = async (
+  count: number,
+  category: string,
+  difficulty: string
+) => {
+  const response = await fetch(
     `${BASE_URL_QUIZ}?amount=${count}&category=${category}&difficulty=${difficulty}&type=multiple`
   );
-    const res = await data.json();
-    return res.results
+
+  const data = await response.json();
+    console.log(data)
+  return data.results;
+  
 };
 
 export const getCategory = async () => {
