@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Switch = () => {
   return (
-    <StyledWrapper className='mt-4 mx-8 flex self-start'>
+    <StyledWrapper className='mx-8 flex self-start'>
       <label className="switch">
         <input type="checkbox" />
         <span className="slider">

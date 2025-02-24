@@ -32,6 +32,7 @@ export default function SetUpComponent() {
       setIsDisabled(false);
     } else {
       setIsValid(false);
+      
       setIsDisabled(true);
     }
   }, [value]);
@@ -99,6 +100,7 @@ export default function SetUpComponent() {
           className="w-1/2 rounded-full bg-orange-400 p-4 text-[#011242] font-semibold text-xl font-mono"
         />
         {isValid && <p className="text-xs text-green-500">That's right!</p>}
+        {!isValid && <p className="text-xs text-red-500">Please Choose 5 to 10</p>}
       </div>
 
       {/* موضوع سوالات */}

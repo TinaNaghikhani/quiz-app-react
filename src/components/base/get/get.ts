@@ -8,7 +8,6 @@ export const getQuizData = async (
   const response = await fetch(
     `${BASE_URL_QUIZ}?amount=${count}&category=${category}&difficulty=${difficulty}&type=multiple`
   );
-
   const data = await response.json();
     console.log(data)
   return data.results;
