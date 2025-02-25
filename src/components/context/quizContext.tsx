@@ -18,7 +18,7 @@ const defaultContextValue: QuizContextType = {
 export const QuizContext = createContext<QuizContextType>(defaultContextValue)
 // تعریف Provider
 export const QuizProvider = ({ children }: { children: React.ReactNode }) => {
-    const [qList, setQList] = useState([]);
+    const [qList, setQList] = useState<Question[]>([]);
     return (
         <QuizContext.Provider value={{ qList, setQList }}>
             {children}

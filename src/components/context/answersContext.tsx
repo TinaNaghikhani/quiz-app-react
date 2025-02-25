@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useState, ReactNode } from "react";
 // Context type definition
 interface AnswersContextType {
     correctPercentage: number;
