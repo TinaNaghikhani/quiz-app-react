@@ -1,6 +1,6 @@
 import Loader from "../base/rocket/roket";
 import { useNavigate } from "react-router-dom";
-import Switch from "../base/swichMode/swichMode";
+// import Switch from "../base/swichMode/swichMode";
 import { useContext, useState } from "react";
 import { Button } from "@chakra-ui/react";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { QuizContext } from "../context/quizContext";
 import EndButton from "../base/endButton/endButton";
 import { AnswersContext } from "../context/answersContext";
+// import { LightModeContext } from "../context/lightMode";
 
 
 export default function QuizComponent() {
@@ -17,7 +18,7 @@ export default function QuizComponent() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState<string | null>(null);
   const [userAnswers, setUserAnswers] = useState<string[]>(Array(qList.length).fill(""));
-
+  // const { lightMode, setLightMode } = useContext(LightModeContext);
   const navigator = useNavigate();
 
   // تابع برای ثبت جواب کاربر
@@ -57,15 +58,13 @@ export default function QuizComponent() {
     }, 3000);
   }
   return (
-    <div className="bg-[#011242] pt-4 h-screen flex flex-col gap-32">
-            {/* لودر */}
+    <div className="p-16 text-white bg-[#011242] pt-4 h-screen flex flex-col gap-32">
       {loader && (
-        <div className="h-screen w-full absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div className="bg - black h-screen w-full absolute inset-0 flex items-center justify-center  bg-opacity-50 z-50" >
           <Loader />
         </div>
       )}
-      {/* Switch Mode */}
-      <Switch />
+      {/* <Switch onClick={() => setLightMode(!lightMode)} /> */}
       <div className="w-full bg-[#011242] text-white flex flex-col justify-center gap-12 items-center ">
         {/* سوال فعلی */}
         <div className="w-3/4 flex flex-col items-center gap-4">

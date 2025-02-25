@@ -3,9 +3,7 @@ import StartComponent from '../../components/startComponent/startComponent'
 
 export default function StartPage() {
     return (
-        <LightModeProvider>
             <StartComponent />
-        </LightModeProvider>
 
     )
 }

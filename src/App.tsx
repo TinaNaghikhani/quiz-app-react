@@ -11,18 +11,16 @@ function App() {
 
 
   return (
-    <AnswersProvider>
-      <QuizProvider>
-        <Routes>
-          <Route path="/" element={<StartPage />} />
-          <Route path="/SetUpPage" element={<SetUpPage />} />
-          <Route path="/QuizPage" element={<QuizPage />} />
-          <Route path="/ResultPage" element={<ResultPage />} />
-        </Routes>
-      </QuizProvider>
-    </AnswersProvider>
-
-
+      <AnswersProvider>
+        <QuizProvider>
+          <Routes>
+            <Route path="/" element={<StartPage />} />
+            <Route path="/SetUpPage" element={<SetUpPage />} />
+            <Route path="/QuizPage" element={<QuizPage />} />
+            <Route path="/ResultPage" element={<ResultPage />} />
+          </Routes>
+        </QuizProvider>
+      </AnswersProvider>
   )
 }
 

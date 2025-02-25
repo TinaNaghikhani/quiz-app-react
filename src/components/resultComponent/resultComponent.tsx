@@ -1,6 +1,6 @@
 import Capture from "../../assets/Capture.jpg"
 import { Button } from '@chakra-ui/react'
-import Switch from '../base/swichMode/swichMode'
+// import Switch from '../base/swichMode/swichMode'
 import { AnswersContext, AnswersProvider } from "../context/answersContext";
 import { useContext } from "react";
 import highScoreImg from "../../assets/highScoreImg.jpg"
@@ -14,9 +14,9 @@ export default function ResultComponent() {
   const resultImage = correctPercentage >=70 ? highScoreImg : correctPercentage >= 40 ? midScoreImg : lowScoreImg;
   return (
 
-      <div className='mt-0 w-full h-screen flex flex-col gap-8 items-center bg-[#011242]'>
+      <div className='mt-0 p-16 w-full h-screen flex flex-col gap-8 items-center bg-[#011242]'>
         <div className="w-full h-1/5 flex justify-between">
-          <Switch />
+          {/* <Switch /> */}
           <img src={Capture} alt="" className='w-24 h-24 m-8 transition duration-75 animate-spin' />
         </div>
 
@@ -26,6 +26,6 @@ export default function ResultComponent() {
         <Button colorScheme='orange' onClick={resetAnswers} className='m-8 w-56 p-8 font-mono transition-all duration-500 ease-in-out transform hover:scale-110'>Lets Start...</Button>
       </div>
 
-    </AnswersProvider>
+
   )
 }
